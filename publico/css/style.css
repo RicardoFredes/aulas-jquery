@@ -1,0 +1,173 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+* {
+    box-sizing: border-box;
+}
+.bloco {
+    padding: 32px calc(50vw - 480px);
+}
+.escopo {
+    padding: 16px calc(50vw - 480px);
+    background-color: #333333;
+    color: white;
+}
+.escopo > * {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+#mensagem {
+    box-sizing: border-box;
+    position: absolute;
+    width: 100%;
+    display: block;
+    left: 0;
+    top: 50px;
+    padding: 10px calc(50vw - 480px);
+    height: 20px;
+    text-align: right;
+    font-family: monospace;
+    color: #888888;
+    z-index: 1;
+}
+/* 01 */
+nav {
+    display: flex;
+    height: 80px;
+    border-bottom: 1px solid #cccccc;
+}
+.menu {
+    display: flex;
+    flex-grow: 1;
+    list-style-type: none;
+    margin: 0;
+    position: relative;
+    transition: all ease 0.3s;
+}
+.menu > li > a {
+    display: block;
+    padding: 10px 15px 0;
+    line-height: 60px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #333333;
+    box-sizing: content-box;
+    border-bottom: 10px solid transparent;
+    transition: all ease 0.3s;
+}
+.menu > li:hover > a {
+    background-color: #eeeeee;
+    border-bottom-color: #333333;
+}
+.menu > li > ul {
+    position: absolute;
+    top: 80px;
+    min-width: 180px;
+    list-style-type: none;
+    background-color: #eeeeee;
+    padding: 0;
+    margin: 0;
+}
+.menu > li > ul a {
+    display: block;
+    line-height: 35px;
+    padding: 0px 15px;
+    text-decoration: none;
+    color: #333333;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+    transition: all ease 0.3s;
+}
+.menu > li > ul a:hover {
+    background-color: #cccccc;
+}
+
+.botao {
+    height: 80px;
+    width: 80px;
+    position: relative;
+    transition: background-color ease 0.3s;
+    cursor: pointer;
+}
+.botao:hover {
+    background-color: #eeeeee;
+}
+.botao > span {
+    position: absolute;
+    display: inline-block;
+    height: 3px;
+    width: 40px;
+    background-color: #333333;
+    top: 50%;
+    left: 50%;
+    transform-origin: center;
+    transition: all ease 0.3s;
+}
+.fechado .botao > span {
+    transform: translate(-50%, -50%);
+}
+.fechado .botao > span:first-child {
+    transform: translate(-50%, calc(-50% + 10px));
+}
+.fechado .botao > span:last-child {
+    transform: translate(-50%, calc(-50% - 10px));
+}
+
+.botao > span {
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+.botao > span:last-child {
+    transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.fechado > .menu {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(40px);
+}
+
+/* 02 */
+#lampada {
+    background-color: black;
+    position: relative;
+}
+#lampada > img {
+    width: 100%;
+    transition: all ease 1s;
+}
+.apagada > img {
+    opacity: 0;
+}
+#interruptor {
+    position: absolute;
+    top: 40px;
+    width: 100%;
+    display: block;
+    text-align: right;
+}
+#interruptor > img {
+    cursor: pointer;
+    transform: rotate(180deg);
+}
+
+.apagada #interruptor > img {
+    transform: translate(2px, 2px);
+}
+
+.treme-treme {
+    animation: tremer 500ms infinite;
+}
+
+@keyframes tremer {
+    0% {
+        transform: translate(0px, 0px);
+    }
+    50% {
+        transform: translate(5px, 5px);
+    }
+    100% {
+        transform: translate(0px, 0px);
+    }
+}

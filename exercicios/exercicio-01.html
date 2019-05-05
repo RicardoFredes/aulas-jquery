@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Exercício 01 - DOM</title>
+  <link rel="shortcut icon" href="../publico/img/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="../publico/css/style.css">
+  <script src="../publico/js/jquery-3.4.1.min.js"></script>
+</head>
+<body>
+  <header class="escopo">
+    <h3>Exercício 01: <small>DOM (Document Object Model)</small></h3>
+  </header>
+  <section class="bloco" id="secao">
+    <h3>O que é o DOM?</h3>
+    <p>
+      É uma árvore de elementos descritos em HTML, XML ou XHTML.
+    </p>
+    <h3>O que é JQuery</h3>
+    <p>
+      É uma biblioteca em <strong>Java Script</strong> que disponibiliza uma boa quantidade de métodos, 
+      que são fáceis de usar (aprendizado e implementação). O lema do <strong>JQuery</strong> 
+      traduz muito bem o que ele faz: <em>WRITE LESS, DO MORE</em>. (Escreva menos, faça mais). Essa
+      biblioteca é executada no lado do cliente (Client Side), ou seja, quando o conteúdo da página já foi 
+      baixado para o dispositivo do Cliente e o navegador o renderiza.
+    </p>
+    <h4>Exemplo:</h4>
+    <img src="../publico/img/exemplo-1-a.jpg"><br/>
+    <img src="../publico/img/exemplo-1-b.jpg">
+    <h3>Como acessar o DOM por JQuery</h3>
+    <p>
+      A biblioteca disponibiliza um método de seleção de elementos igual ao utilizado em CSS.
+      <ul>
+        <li>
+            <strong>nomedatag</strong>: seleciona elementos pelo nome da tag.
+        </li>
+        <li>
+          <strong>#nomedoid</strong>: seleciona elementos pelo seu id.
+        </li>
+        <li>
+          <strong>.nomedaclasse</strong>: seleciona elementos pela sua classe.
+        </li>
+      </ul>
+    </p>
+  </section>
+  <hr/>
+  <section class="bloco">
+    <h3>Exercícios de seleção</h3>
+    <p id="elemento1">
+      1- Selecione o id secao e aplique o método hide().
+    </p>
+    <p id="elemento2">
+      2- Mude a core dessa frase para vermelho usando o método css(prop, value).
+    </p>
+    <p id="elemento3">
+      3- Aplique a classe 'treme-treme' usando o método addClass() e depois remova usando o método removeClass().
+    </p>
+    <p id="elemento4">
+      4- Use o método alert() para exibir este conteúdo: <span id="conteudo">Olá Mundo!</span>
+    </p>
+    <h3>Exercícios de evento</h3>
+    <p id="elemento5">
+      5- Adicione um evento de clique do mouse e mude a cor desse elemento para azul usando o método on(evento, funcao).
+    </p>
+    <p id="elemento6">
+      6- Adicione um evento de passagem do mouse sobre este elemento e adicione a classe 'treme-treme' usando o evento .hover(funcaoDeMouseSobre, funcaoDeMouseFora).
+    </p>
+    <p id="elemento7">
+      7- Adicione um evento de clique às tags h3 e use o método text(novoTexto) para alterar o texto.
+    </p>
+  </section>
+</body>
+</html>
