@@ -171,3 +171,48 @@ nav {
         transform: translate(0px, 0px);
     }
 }
+
+/* 04 */
+#carrossel img {
+    max-width: 100%;
+}
+#carrossel > ul {
+    width: 100%;
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+}
+
+#carrossel > ul li {
+    padding: 0;
+    margin: 2px;
+    cursor: pointer;
+    opacity: 0.5;
+    transition: all ease 0.3s;
+}
+#carrossel > ul li.selecionado,
+#carrossel > ul li:hover {
+    opacity: 1;
+}
+#carrossel > ul li:first-child {
+    margin-left: 0;
+}
+#carrossel > ul li:last-child {
+    margin-right: 0;
+}
+#carrossel #principal {
+    width: 100%;
+    padding-top: 40%;
+    height: 0;
+    overflow: hidden;
+    position: relative;
+}
+#carrossel #imagem-principal {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+}
