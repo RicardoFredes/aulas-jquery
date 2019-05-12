@@ -4,37 +4,43 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Exercício 04 - Carrossel de Imagens</title>
+  <title>Exercício 04 - Expandir texto</title>
   <link rel="shortcut icon" href="../publico/img/favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="../publico/css/style.css">
   <script src="../publico/js/jquery-3.4.1.min.js"></script>
 </head>
 <body>
   <header class="escopo">
-    <h3>Exercício 04: <small>Carrossel de Imagens</small></h3>
+    <h3>Exercício 04: <small>Mostrar ou esconder texto</small></h3>
   </header>
   <div id="mensagem"></div>
-  <section id="carrossel" class="bloco">
-    <div id="principal">
-      <img id="imagem-principal" src="../publico/img/carrossel/imagem-1.jpg">
+  <section class="bloco">
+    <h1>Esse é um exemplo de textos com a opção de ver mais</h1>
+    <p>Ao clicar sobre a pergunta, o texto com a resposta deve aparecer por completo.</p>
+  </section>
+  <hr/>
+  <section id="perguntas-frequentes" class="bloco">
+    <h2>Perguntas Frequentes:</h2>
+    <div class="bloco-de-texto-ver-mais">
+        <h3>Existe plano anual ?</h3>
+        <p>Sim! Você pode adquirir um plano com duração de 12 meses a partir da data de contratação do seu plano. Ele deverá ser pago à vista, em dinheiro, diretamente com o gerente da unidade. Os valores de cada plano têm inclusos taxa de adesão e manutenção anual do plano escolhido. Consulte as condições de contratação diretamente com o gerente de sua unidade e solicite o plano.</p>
     </div>
-    <ul>
-      <li class="selecionado">
-        <img src="../publico/img/carrossel/imagem-1.jpg">
-      </li>
-      <li>
-        <img src="../publico/img/carrossel/imagem-2.jpg">
-      </li>
-      <li>
-        <img src="../publico/img/carrossel/imagem-3.jpg">
-      </li>
-      <li>
-        <img src="../publico/img/carrossel/imagem-4.jpg">
-      </li>
-      <li>
-        <img src="../publico/img/carrossel/imagem-5.jpg">
-      </li>
-    </ul>
+    <div class="bloco-de-texto-ver-mais">
+        <h3>Qual a idade mínima para a matrícula ?</h3>
+        <p>Para começar a treinar, é necessário ser maior de 14 anos. Para fazer sua matrícula é necessário a presença de um responsável, maior de idade, portanto um documento de identificação com foto.</p>
+    </div>
+    <div class="bloco-de-texto-ver-mais">
+        <h3>Qual cadeado devo usar ?</h3>
+        <p>O mercado possui muitos tipos de cadeados e você pode escolher um de sua preferência. Mas só leve em consideração o tamanho, dando preferência por aqueles com tamanho médio.</p>
+    </div>
+    <div class="bloco-de-texto-ver-mais">
+        <h3>Tem bicicletário ?</h3>
+        <p>Você pode verificar a disponibilidade de bicicletários na página de cada unidade em nosso site. Aproveite e pedale até a recepção para saber as condições de uso.</p>
+    </div>
+    <div class="bloco-de-texto-ver-mais">
+        <h3>Tem estacionamento ?</h3>
+        <p>Você pode conferir a disponibilidade do serviço acessando a página da sua unidade em nosso site, aproveite a veja se o estacionamento é próprio ou conveniado</p>
+    </div>
   </section>
   <!--
     <script src="../publico/js-respostas/exercicio-04.js"></script>

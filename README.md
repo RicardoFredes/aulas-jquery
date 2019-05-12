@@ -1,2 +1,2 @@
-# aulas-jquery
-Exercícios de JQuery
+# Aulas de JQuery
+Série de exercícios para treinar JQuery

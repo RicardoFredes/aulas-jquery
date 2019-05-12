@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Exercício 08 - Carregamento infinito</title>
+  <link rel="shortcut icon" href="../publico/img/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="../publico/css/style.css">
+  <script src="../publico/js/jquery-3.4.1.min.js"></script>
+</head>
+<body>
+  <header class="escopo">
+    <h3>Exercício 08: <small>Carregamento de conteúdo automático quando a página chega ao final</small></h3>
+  </header>
+  <section class="bloco">
+    <h2>Conteúdo extenso</h2>
+    <p>Uma estratégia muito comum, quando o conteúdo de uma página é muito extenso, é o carregamento de mais 
+        conteúdo assíncronamente, ou seja, após o usuário já ter carregado parte do conteúdo da página,
+        é possível carregar as outras partes somente quando o usuário for consumir mais conteúdo.
+        Dessa forma o usuário não baixa em seu dispositivo mais bytes do que realmente precisa e, quando desejar ler mais,
+        a página vai carrregando para ele mais conteúdos. Isso é bastante comum nas redes sociais: a medida
+        que a página vai sendo arrastada no sentido de cima para baixo, ao chegar ao final da página,
+        uma nova matéria ou 'post' é adicinado.
+    </p>
+    <p>
+        No exemplo dessa página, vamos fazer a mesma coisa! Claro que ainda não iremos carregar um conteúdo
+        externo, mas iremos implementar aqui um reconhecimento de que o usuário chegou ao final da página.
+        Cada vez que isso ocorrer, vamos simular o carregamento de mais conteúdo clonando o conteúdo desta página e
+        e adicionando ao final da página. A quantidade de texto será adicionada até que
+        seja o necessária para que o usuário tenha que baixar a página novamente.
+    </p>
+    <p>
+        Esso carregamento será realizado infinitamente. Para saber se o usuário chegou ao final da página,
+        você precisará acessar o objeto window da DOM. Esse objeto que o navegador disponibiliza para o 
+        JavaScript possui diversas propriedades, inclusive sobre a janela e o documento dentro da janela.
+        Para saber o que tem dentro do objeto window, abra o console do navegador e digite: 
+        console.log(window). Dentro dele é possível ver muitas propriedades e métodos disponíveis.
+        As propriedades que nos interessam são as dimensões e posições da janela e a do documento.
+        O cálculo será realizado em cima da diferença da distância entre a altura do documento e o posicionamento
+        da janela em relação a ele. sempre que essa diferença for zero, significa que o usuário
+        chegou ao fim do documento.
+    </p>
+    <p>
+        Para receber esses valores atualizados, será necessário adicionar um evento que é disparado
+        cada vez que o documento for movido dentro da janela do navegador em sentido vertical: o scroll.
+        A altura da janela está na propriedade window.innerHeight, já a altura do documento está na propriedade: window.document.body.clientHeight
+        ou apenas document.body.clientHeight.
+        Ou dado necessário para o cálculo é a posição da janela em relação ao documento, que é dada pela propriedade window.scrollY
+    </p>
+    <p>
+        Com os três dados é possível estabelecer uma equação, em que a altura do documento é igual a soma da altura da janela com
+        a usa posição vertical. Já que a sua posição vertical é dada pelo topo, ela é a distância entre o topo do documento e o topo da janela.
+        A equação ficará assim: <br><br>
+        alturaDoDocumento = alturaDaJanela + distanciaEntreJanelaEDocumento
+        <br><br>
+        ou
+        <br><br>
+        document.body.clientHeight = window.innerHeight + window.scrollY
+    </p>
+    <p>
+        Sempre que essa equação for verdade, significa que a página está no final e é nessa situação em que o 
+        conteúdo deverá ser adicionado ao final da página. Para verificar esssa situação, use dentro do
+        evento o seguinte trecho de código:
+        <pre>
+        if (document.body.clientHeight === window.innerHeight + window.scrollY) {
+
+            ... seu código aqui ...
+
+        }
+        </pre>
+        Note que o sinal de === é usado para comparar um valor com outro e não para atribuir um valor.
+        Como o que ocorre ao se usar um sinal de = uma única vez.
+    </p>
+  </section>
+  
+  <!--
+    <script src="../publico/js-respostas/exercicio-08.js"></script>
+  -->
+</body>
+</html>
