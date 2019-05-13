@@ -324,3 +324,37 @@ button:hover {
 #sete-maravilhas-apresentacao p {
     line-height: 1.5em;
 }
+
+/* 09 */
+.materia {
+    line-height: 1.5em;
+}
+.materia h1 {
+    font-size: 40px;
+}
+.materia h2 {
+    margin-top: 2em;
+    font-size: 18px;
+}
+article {
+    max-width: 600px;
+}
+.bibliografia {
+    border: 1px solid #dddddd;
+    padding: 20px;
+    border-radius: 5px;
+    margin-top: 40px;
+}
+.capa {
+    background-color: black;
+}
+.materia img {
+    display: block;
+    max-width: 100%;
+    margin: 40px auto;
+}
+.capa img {
+    display: block;
+    max-width: 100%;
+    margin: 0 auto;
+}
