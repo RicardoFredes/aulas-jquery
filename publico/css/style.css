@@ -358,3 +358,20 @@ article {
     max-width: 100%;
     margin: 0 auto;
 }
+
+/*
+Tabela
+*/
+table td {
+    padding: 20px;
+}
+table thead {
+    font-weight: bold;
+}
+table thead td {
+    border-bottom: 1px solid #333333;
+    background-color: #f1f1f1;
+}
+table tbody td {
+    border-bottom: 1px solid #cccccc;
+}

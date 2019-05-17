@@ -4,18 +4,75 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Exercício 10 - Manipulando Objetos</title>
+  <title>Exercício 10 - Ajax</title>
   <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="../publico/css/style.css">
   <script src="../publico/js/jquery-3.4.1.min.js"></script>
 </head>
 <body>
   <header class="escopo">
-    <h3>Exercício 10: <small>Apresentando dados json</small></h3>
+    <h3>Exercício 10: <small>Pegando dados de uma Api</small></h3>
   </header>
-  <section class="bloco">
-
+  <section id="instrucoes" class="bloco" style="background-color: #f1f1f1">
+    <h1>Quantos compartilhamentos um domínio tem?</h1>
+    <p>
+      Nesse exercício nós vamos usar o serviço do site <a href="https://www.sharedcount.com/">https://www.sharedcount.com/</a>
+      para descobrir quantos compartilhamentos um determinado domínio tem.
+    </p>
+    <p>
+      Para isso nós vamos usar a seguinte URL para fazer a requisição:
+    </p>
+    <pre>
+      https://api.sharedcount.com/v1.0/?url={MINHA_URL}&apikey={API_KEY}
+    </pre>
+    <p>
+      Onde MINHA_URL deve ser a url a ser pesquisada e API_KEY dever ser:
+    </p>
+    <pre>
+      1934f519a63e142e0d3c893e59cc37fe0172e98a
+    </pre>
   </section>
+  <section class="bloco">
+    <h2>Digite a url abaixo:</h2>
+    <input id="url" type="text" placeholder="https://">
+    <button id="botao-pesquisar">Pesquisar</button>
+    <span>
+        <img id="carregando" src="../publico/img/carregando.gif" height="32">
+    </span>
+  </section>
+  <hr/ >
+  <section class="bloco">
+    <table>
+      <thead>
+        <tr>
+          <td>N°</td>
+          <td>URLs</td>
+          <td>Reações no Facebook</td>
+          <td colspan="2">Compartilhamento no Facebook</td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr id="1">
+          <td>1</td>
+          <td>https://mesalva.com/</td>
+          <td>5.500</td>
+          <td>2.500</td>
+          <td><button onclick="removeLinha(1)" class="remover">Remover</button></td>
+        </tr>
+        <tr id="2">
+          <td>2</td>
+          <td>https://mesalva.com/</td>
+          <td>5.500</td>
+          <td>2.500</td>
+          <td><button onclick="removeLinha(2)"  class="remover">Remover</button></td>
+        </tr>
+      </tbody>
+    </table>
+    <p>
+      <button id="botao-remover-todos">Remover todos</button>
+    </p>
+  </section>
+  <script src="../publico/js-respostas/exercicio-10.js"></script>
   <!--
     <script src="../publico/js-respostas/exercicio-10.js"></script>
   -->
