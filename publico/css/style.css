@@ -9,6 +9,9 @@ body {
 .bloco {
     padding: 32px calc(50vw - 480px);
 }
+.bloco-menor {
+    padding: 32px calc(50vw - 280px);
+}
 .escopo {
     padding: 16px calc(50vw - 480px);
     background-color: #333333;
@@ -17,6 +20,9 @@ body {
 .escopo > * {
     margin-top: 0;
     margin-bottom: 0;
+}
+.texto-centro {
+    text-align: center;
 }
 #mensagem {
     box-sizing: border-box;
