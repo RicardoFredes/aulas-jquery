@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Exercício 11 - Ajax</title>
+  <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="../publico/css/style.css">
+  <script src="../publico/js/jquery-3.4.1.min.js"></script>
+</head>
+<body>
+  <header class="escopo">
+    <h3>Exercício 11: <small>Api de charadas</small></h3>
+  </header>
+  <section id="instrucoes" class="bloco" style="background-color: #f1f1f1">
+    <h1>Trabalhando com uma Api com responsta em JSON</h1>
+    <p>
+      Nesse exercício nós vamos usar a api  <a href="https://api-de-charadas.fredes.now.sh/charada/json">https://api-de-charadas.fredes.now.sh/charada/json</a>
+      para montar uma aplicação interativa de charadas.
+    </p>
+  </section>
+  <section class="bloco-menor charada texto-centro">
+    <h2 id="pergunta">O que o padre disse na missa quando o cálice caiu das suas mãos várias vezes?</h2>
+    <p id="resposta">
+      Cálice, cálice, cálice! Você me deixa louco!
+    </p>
+  </section>
+  <hr />
+  <div class="bloco texto-centro">
+    <button id="botao-carregar-charada">Nova charada</button>
+    <span>
+        <img id="carregando" src="../publico/img/carregando.gif" height="25" style="position: relative; top: 9px;">
+    </span>
+  </div>
+  <!--
+    <script src="../publico/js-respostas/exercicio-11.js"></script>
+  -->
+</body>
+</html>
