@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Exercício 12 - Super Trunfo</title>
+  <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="../publico/css/style.css">
+  <script src="../publico/js/jquery-3.4.1.min.js"></script>
+</head>
+<body>
+  <header class="escopo">
+      <h3>Exercício 12: <small>Super Trunfo</small></h3>
+  </header>
+  <section id="instrucoes" class="bloco" style="background-color: #f1f1f1">
+    <h1>Jogo Super Trunfo: temática de seleções de futebol</h1>
+    <p>
+      Nesse exercício nós vamos usar a api  <a href="https://api-super-trunfo.fredes.now.sh">https://api-super-trunfo.fredes.now.sh</a>
+      para sortear as cartas.
+    </p>
+  </section>
+  <section id="super-trunfo" class="bloco-menor texto-centro">
+    <div id="imagem-do-campo-de-futebol">
+      <img src="../publico/img/super-trunfo/campo-de-futebol.jpg">
+    </div>
+    <div id="placar">
+      <span id="pontos-do-jogador-1">0</span>
+      <h3>Placar</h3>
+      <span id="pontos-do-jogador-2">0</span>
+    </div>
+    <div id="campo-de-batalha">
+      <div id="carta-jogador-1" class="carta revelada">
+        <img src="../publico/img/bandeiras/alemanha.png" />
+        <h1>Alemanhã</h1>
+        <ul>
+          <li>
+            <strong>Ataque: </strong>
+            <span>78</span>
+          </li>
+          <li>
+            <strong>Meio: </strong>
+            <span>72</span>
+          </li>
+          <li>
+            <strong>Defesa: </strong>
+            <span>71</span>
+          </li>
+          <li>
+            <strong>Títulos: </strong>
+            <span>0</span>
+          </li>
+          <li>
+            <strong>Copas participantes: </strong>
+            <span>5</span>
+          </li>
+        </ul>
+      </div>
+      <div id="carta-jogador-2" class="carta escondida">
+        <img src="../publico/img/bandeiras/alemanha.png" />
+        <h1>Alemanhã</h1>
+        <ul>
+          <li>
+            <strong>Ataque: </strong>
+            <span>78</span>
+          </li>
+          <li>
+            <strong>Meio: </strong>
+            <span>72</span>
+          </li>
+          <li>
+            <strong>Defesa: </strong>
+            <span>71</span>
+          </li>
+          <li>
+            <strong>Títulos: </strong>
+            <span>0</span>
+          </li>
+          <li>
+            <strong>Copas participantes: </strong>
+            <span>5</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+  <hr />
+  <div class="bloco texto-centro">
+    <span>
+      <img id="carregando" src="../publico/img/carregando.gif" height="25" style="position: relative; top: 9px;">
+    </span>
+  </div>
+  <script src="../publico/js-respostas/exercicio-12.js"></script>
+  <!--
+    <script src="../publico/js-respostas/exercicio-12.js"></script>
+  -->
+</body>
+</html>

@@ -381,3 +381,87 @@ table thead td {
 table tbody td {
     border-bottom: 1px solid #cccccc;
 }
+
+/* Super Trunfo */
+#super-trunfo {
+    position: relative;
+    overflow: hidden;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#imagem-do-campo-de-futebol {
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    overflow: hidden;
+}
+#imagem-do-campo-de-futebol img {
+    min-width: 100%;
+    filter: blur(8px) brightness(0.75);
+    transform: scale(1.1);
+}
+
+#placar {
+    position: absolute;
+    width: 600px;
+    top: 80px;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 2px solid white;
+    padding: 5px 40px;
+    border-radius: 4px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.carta {
+    background-color: #f1f1f1;
+    border-radius: 5px;
+    width: 250px;
+    padding: 10px;
+    text-align: center;
+    box-shadow: 0 2px 8px #00000099;
+}
+.carta h1 {
+    margin: 0;
+    text-transform: uppercase;
+    font-size: 18px;
+}
+.carta ul {
+    list-style-type: none;
+    padding: 0;
+}
+.carta ul li {
+    width: 100%;
+    padding: 5px 20px;
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid #ccc;
+}
+.carta ul li span {
+    text-align: right;
+}
+.carta.escondida {
+    transform: translateY(-20px) rotate(10deg);
+    z-index: -1;
+    background-image: url('../img/super-trunfo/costas-baralho.jpg');
+}
+.carta.escondida > * {
+    opacity: 0;
+}
+
+#campo-de-batalha {
+    display: flex;
+    padding-top: 80px;
+    justify-content: space-between;
+    width: 520px;
+}
