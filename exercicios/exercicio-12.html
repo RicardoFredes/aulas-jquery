@@ -7,10 +7,11 @@
   <title>Exercício 12 - Super Trunfo</title>
   <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="../publico/css/style.css">
+  <link rel="stylesheet" href="../publico/css/carregando.css">
   <script src="../publico/js/jquery-3.4.1.min.js"></script>
 </head>
-<body>
-  <header class="escopo">
+<body style="background-color: #214b14;">
+  <header id="escopo" class="escopo">
       <h3>Exercício 12: <small>Super Trunfo</small></h3>
   </header>
   <section id="instrucoes" class="bloco" style="background-color: #f1f1f1">
@@ -24,73 +25,73 @@
     <div id="imagem-do-campo-de-futebol">
       <img src="../publico/img/super-trunfo/campo-de-futebol.jpg">
     </div>
+    <div id="mensagem-do-jogo"></div>
     <div id="placar">
       <span id="pontos-do-jogador-1">0</span>
       <h3>Placar</h3>
       <span id="pontos-do-jogador-2">0</span>
     </div>
-    <div id="campo-de-batalha">
-      <div id="carta-jogador-1" class="carta revelada">
+    <div id="controles-do-jogo">
+      <div id="carregando" class="carregando"></div>
+      <button id="botao-iniciar-jogo">Nova Partida</button>
+    </div>
+    <div id="campo-de-batalha" class="minimizado">
+      <div id="carta-jogador-1" class="carta-jogador carta" style="z-index: -1;">
         <img src="../publico/img/bandeiras/alemanha.png" />
         <h1>Alemanhã</h1>
         <ul>
-          <li>
+          <li class="ataque">
             <strong>Ataque: </strong>
             <span>78</span>
           </li>
-          <li>
+          <li class="meio">
             <strong>Meio: </strong>
             <span>72</span>
           </li>
-          <li>
+          <li class="defesa">
             <strong>Defesa: </strong>
             <span>71</span>
           </li>
-          <li>
+          <li class="titulos">
             <strong>Títulos: </strong>
             <span>0</span>
           </li>
-          <li>
+          <li class="aparicao_copas">
             <strong>Copas participantes: </strong>
             <span>5</span>
           </li>
         </ul>
       </div>
-      <div id="carta-jogador-2" class="carta escondida">
-        <img src="../publico/img/bandeiras/alemanha.png" />
-        <h1>Alemanhã</h1>
-        <ul>
-          <li>
-            <strong>Ataque: </strong>
-            <span>78</span>
-          </li>
-          <li>
-            <strong>Meio: </strong>
-            <span>72</span>
-          </li>
-          <li>
-            <strong>Defesa: </strong>
-            <span>71</span>
-          </li>
-          <li>
-            <strong>Títulos: </strong>
-            <span>0</span>
-          </li>
-          <li>
-            <strong>Copas participantes: </strong>
-            <span>5</span>
-          </li>
-        </ul>
+      <div id="carta-jogador-2" class="carta-jogador estado-da-carta virada">
+        <div class="carta">
+          <img src="../publico/img/bandeiras/alemanha.png" />
+          <h1>Alemanhã</h1>
+          <ul>
+            <li class="ataque">
+              <strong>Ataque: </strong>
+              <span>78</span>
+            </li>
+            <li class="meio">
+              <strong>Meio: </strong>
+              <span>72</span>
+            </li>
+            <li class="defesa">
+              <strong>Defesa: </strong>
+              <span>71</span>
+            </li>
+            <li class="titulos">
+              <strong>Títulos: </strong>
+              <span>0</span>
+            </li>
+            <li class="aparicao_copas">
+              <strong>Copas participantes: </strong>
+              <span>5</span>
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
   </section>
-  <hr />
-  <div class="bloco texto-centro">
-    <span>
-      <img id="carregando" src="../publico/img/carregando.gif" height="25" style="position: relative; top: 9px;">
-    </span>
-  </div>
-  <script src="../publico/js-respostas/exercicio-12.js"></script>
   <!--
     <script src="../publico/js-respostas/exercicio-12.js"></script>
   -->
